@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to Our Website</h1>
+    <p class="lead">This is the default page for visitors without an account.</p>
+    <hr class="my-4">
+    <p>Please register or log in to access personalized content and blog posts.</p>
+    <div class="mt-4">
+        <a class="btn btn-primary btn-lg" href="{{ url_for('register') }}" role="button">Register</a>
+        <a class="btn btn-outline-primary btn-lg" href="{{ url_for('login') }}" role="button">Login</a>
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Verify Code{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2 class="mb-4">Verify Your Code</h2>
+        <p>Enter the verification code sent to your phone.</p>
+        <form method="POST">
+            <div class="mb-3">
+                <label for="code" class="form-label">Verification Code</label>
+                <input type="text" class="form-control" id="code" name="code" required maxlength="6">
+            </div>
+            <button type="submit" class="btn btn-primary">Verify</button>
+            <a href="{{ url_for('forgot_password') }}" class="btn btn-link">Back</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
