@@ -4,16 +4,20 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import random
 import datetime
 from datetime import datetime, timezone, timedelta
-
+import os
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your-secret-key-here'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ["DATABASE_URL"] 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=30)
 
 db = SQLAlchemy(app)
 
+@app.route("/dbtest")
+def dbtest():
+    return str(db.engine.execute("select 1").fetchone())
 # Database models
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)

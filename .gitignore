@@ -4,3 +4,7 @@ instance/*.db
 *.sqlite
 *.sqlite3
 app.py~
+.env
+.env.*
+*.swp
+*~
