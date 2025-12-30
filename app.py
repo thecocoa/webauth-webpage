@@ -42,7 +42,7 @@ class BlogPost(db.Model):
 # Sample blog posts
 def create_sample_posts():
     posts = [
-        BlogPost(title="Welcome to our platform!", 
+        BlogPost(title="Welcome to our NEW platform!", 
                 content="This is our first blog post. Welcome to our community!"),
         BlogPost(title="New features coming soon", 
                 content="We're working on exciting new features that will be released next month."),
