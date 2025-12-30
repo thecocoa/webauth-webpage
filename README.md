@@ -1,5 +1,10 @@
 Requirements:
 **Supabase** https://supabase.com - create a user, free plan is perfect
+You'll need a .env file in the repo's root.  Never commit this file.  It
+contains information that should not be public.  Make sure it contains:
+``DATABASE_URL=<your database url
+SUPABASE=<your supabase anon>
+SUPABASE_SERVICE_KEY=<you see where I'm going here>``
 
 **Update OS**
 - example Ubuntu
@@ -31,4 +36,5 @@ Install the requirements:
 
 Run the example:
 ``flask run``
+
 
