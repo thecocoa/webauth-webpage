@@ -13,22 +13,22 @@ tk-dev   uuid-dev   libgdbm-dev   libnss3-dev   libedit-dev   libexpat1-dev
 Optional but highly recommended:
 **pyenv** https://github.com/pyenv/pyenv
 
-curl -fsSL https://pyenv.run | bash
+``curl -fsSL https://pyenv.run | bash``
 
 Setup:
 Create a virtualenv with pyenv
 
-``
-Clone the repo: git clone https://github.com/thecocoa/webauth-webpage.git
-``
+``pyenv virtualenv webauth-webpage
+cd ~/projects/webauth-webpage
+pyenv local webauth-webpage``
+
+Clone the repo:
+
+``git clone https://github.com/thecocoa/webauth-webpage.git``
 
 Install the requirements:
-``
-pip install -r requirements.txt
-``
+``pip install -r requirements.txt``
 
 Run the example:
-``
-flask run
-``
+``flask run``
 
