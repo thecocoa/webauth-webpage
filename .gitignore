@@ -8,3 +8,4 @@ app.py~
 .env.*
 *.swp
 *~
+.python-version
